@@ -146,7 +146,7 @@ router.post('/article/create',passport.authenticate('jwt', { session: false }),(
     console.log(id);
     
     const newarticle= new articlemodel({
-        _userId:id,
+        userId:id,
  title:article.title,
  details:article.details
     })
