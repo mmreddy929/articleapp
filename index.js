@@ -40,7 +40,7 @@ require("./strategy/jsonwebtoken")(passport);
 
 require("./models/User");
 require("./models/auth");
-const Port=process.env.PORT
+const Port=process.env.PORT || 6001
 const server=http.createServer(app) 
 server.listen(Port)
 
