@@ -60,7 +60,7 @@ router.post('/register',(req,res)=>{
                 var transporter = nodemailer.createTransport({ service: 'gmail', auth: { user: "maheshreddymoola@gmail.com", pass: "maheshreddymoola@9" } });
                 var mailOptions = { from: 'articleapp', to: user.email,
                  subject: 'Account Verification Token',
-                  text: 'Hello,\n\n' + 'Please verify your account by clicking the link: \nhttp:\/\/' + "192.168.1.132:6001" + '\/api/user/confirmation\/' + token.token + '.\n' }
+                  text: 'Hello,\n\n' + 'Please verify your account by clicking the link: \nhttp:\/\/' + "192.168.1.5:6001" + '\/api/user/confirmation\/' + token.token + '.\n' }
                   
                 transporter.sendMail(mailOptions, function (err) {
                     if (err) { return res.status(500).send({ msg: err.message }); }
