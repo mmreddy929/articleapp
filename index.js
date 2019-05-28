@@ -41,8 +41,10 @@ require("./strategy/jsonwebtoken")(passport);
 require("./models/User");
 require("./models/auth");
 const Port=process.env.PORT
+const server=http.createServer(app) 
+server.listen(Port)
 
-app.listen(process.env.PORT,()=>{
-    console.log(`server started port ${Port}`);
+// app.listen(process.env.PORT,()=>{
+//     console.log(`server started port ${Port}`);
     
-})
+// })
